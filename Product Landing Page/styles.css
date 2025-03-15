@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --color1: #001f31;
+  --color2: #77c720;
+  --sub-color1: #acd0e5;
+  --sub-color2: rgba(255, 255, 255, .33);
+}
+
+h1, h2, h3, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a, a:visited {
+  color: var(--color2);
+}
+
+header {
+  background-color: var(--color1);
+  height: 100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+  header #header-img {
+    height: 60px;
+    margin: 20px 20px 20px 25px;
+  }
+
+  header nav {
+    padding-top: 40px;
+    text-align: right;
+  }
+
+    header nav a {
+      text-decoration: none;
+      margin: 1em;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+      header nav a:hover {
+        text-decoration: underline;
+      }
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--sub-color1);
+  color: var(--color1);
+  text-align: center;
+  
+}
+  
+section {
+  width: 100%;
+  max-width: 1000px;
+  padding: 1em 0 1em 0;
+  margin-bottom: 2em;
+}
+
+#video {
+  width: 100%;
+  min-height: 300px;
+  margin: 0 auto;
+  border: 5px solid var(--color1);
+  border-radius: .5em;
+}
+
+#reviews {
+}
+
+  #reviews ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: top;
+  }
+
+  #reviews ul li {
+    margin: .5em 0 1em 0;
+    list-style-type: none;
+    padding: .75em 1em 1em 1em;
+    margin: .5em;
+    width: 25%;
+    min-width: 12em;
+    background-color: var(--sub-color2);
+    border-radius: .5em;
+  }
+
+#formsection {
+  background-color: var(--sub-color2);
+  border-radius: 1em;
+}
+
+#form {
+  text-align: left;
+  margin: 0 auto;
+  padding: 1em 3em .25em 3em;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 1.5em;
+}
+
+#form div.person-info {
+  grid-column-start: 1;
+}
+
+#form div.question {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0 0 0;
+  font-size: .95em;
+  font-weight: bold;
+}
+
+input, textarea {
+  border-radius: .25em;
+  border: 1px solid var(--color1);
+  padding: .5em;
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+  height: 83%;
+}
+
+input[type="submit"],
+button {
+  display: block;
+  width: 20%;
+  min-width: 9em;
+  margin: 1em auto;
+  padding: .4em 1% 1.4em 1%;
+  height: 2em;
+  font-size: 1rem;
+  border-radius: .5em;
+  background-color: var(--color2);
+  border: 1px solid var(--color1);
+  cursor: pointer;
+  /*min-width: 300px;*/
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+  input[type="submit"]:hover,
+  button:hover {
+    color: white;
+    border: 1px solid white;
+  }
+
+footer {
+  text-align: left;
+  background-color: var(--color1);
+  color: white;
+  padding: 1em 2em 2em 2em;
+  display: grid;
+  grid-template-columns: auto auto max-content;
+  column-gap: 2em;
+}
+
+  footer img {
+    width: 90px;
+    border: 3px solid var(--sub-color1);
+    border-radius: 50%;
+  }
+
+  footer ul{
+    text-align: left;
+  }
+
+    footer ul li {
+      list-style-type: none;
+    }
+
+
+@media (max-width:499px) {
+  header {
+    height: auto;
+    position: fixed;
+    top: 0;
+    align-items: center;
+    text-align: center;
+    display:block;
+  }
+
+  header #header-img {
+    height: 40px;
+    margin: 10px auto 0 auto;
+    display: block;
+    
+  }
+
+  header nav {
+    padding-top: 1em;
+    text-align: center;
+    padding-bottom: 1em;;
+    display: block;
+    width: 100%;
+  }
+
+    header nav a {
+      text-decoration: none;
+      margin: .5em;
+      font-size: 1em;
+      font-weight: normal;
+    }
+
+    main {
+      padding-top: 100px;
+    }
+
+    #form {
+      display: block;
+    }
+
+    textarea {
+      resize: none;
+      height: 8em;
+    }
+
+    input[type="submit"],
+    button {
+      max-width: 50%;
+      padding: 1em 1% 2em 1%;
+      margin: 1em auto 0 auto;
+    }
+
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+      footer * {
+        margin: .5em;
+      }
+
+}
+
+@media (min-width: 500px) and (max-width:660px) {
+  header nav {
+    padding-top: 0;
+  }
+
+    header nav a {
+      padding-top: .25em;
+      padding-right: 1em;
+      margin: 0;
+      display: block;
+    }
+}
+
+@media (min-width:1050px) {
+
+  footer ul li {
+    display: inline-block;
+    margin-left: 1em;
+  }
+
+}
