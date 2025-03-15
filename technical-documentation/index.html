@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>HTML Basics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+      <nav id="navbar">
+        <header><h1>HTML Basics</h1></header>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#Elements_And_Tags">Elements And Tags</a>
+        <a class="nav-link" href="#Attributes">Attributes</a>
+        <a class="nav-link" href="#Lists">Lists</a>
+        <a class="nav-link" href="#Forms">Forms</a>
+      </nav>
+
+    <main id="main-doc">
+
+<!-- INTRODUCTIONS -->
+      <section class="main-section" id="Introduction">
+        <header><h2>Introduction</h2></header>
+        <p>HTML (HyperText Markup Language) is the standard language for creating web pages. It provides the structure of a webpage and is used to organize and display text, images, links, and other content.</p>
+        <p>HTML documents are written in plain text and saved with an ".html" extension. Browsers interpret HTML to render the page for users.</p>
+        <p>The basic structure of an HTML document includes a <span class="tag">&lt;!DOCTYPE&gt;</span> declaration, <span class="tag">&lt;html&gt;</span> tag, and nested elements for the head and body sections.
+        <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Sample HTML&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome to HTML&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+        </code></pre>
+        </p>
+      </section>
+
+<!-- ELEMENTS AND TAGS -->
+      <section class="main-section" id="Elements_And_Tags">
+        <header><h2>Elements And Tags</h2></header>
+        <p>HTML is made up of elements that define the structure of a webpage. Tags are used to specify the start and end of an element.</p>
+        <p>Most elements have an opening tag (e.g., <span class="tag">&lt;h1&gt;</span>) and a closing tag (e.g., <span class="tag">&lt;/h1&gt;</span>). Some elements, like <span class="tag">&lt;img&gt;</span>, are self-closing.</p>
+        <p>Common tags include headings:</p>
+        <ol>
+          <li>H1</li>
+          <li>H2</li>
+          <li>H3</li>
+          <li>H4</li>
+          <li>H5</li>
+        </ol>
+           paragraphs (<span class="tag">&lt;p&gt;</span>), and links (<span class="tag">&lt;a&gt;</span>).</p>
+        <p>Example of a paragraph and a link:
+          <pre><code>
+&lt;p>This is a paragraph.&lt;/p>
+&lt;a href="https://example.com">This is a link&lt;/a>
+          </code></pre>
+        </p>
+        <a class="mobile-nav"  href="#Introduction">back top</a>
+      </section>
+
+<!-- ATTRIBUTES -->
+      <section class="main-section" id="Attributes">
+        <header><h2>Attributes</h2></header>
+        <p>Attributes provide additional information about an element. They are added to the opening tag of an element in a key-value pair format.</p>
+        <p>For example, the <span class="tag">src</span> attribute specifies the source file for an image, and the <span class="tag">href</span> attribute defines the URL for a link.</p>
+        <p>Attributes enhance the functionality of elements, allowing developers to control styling, behavior, and accessibility.</p>
+        <p>Example of attributes in HTML:
+          <pre><code>
+&lt;img src="image.jpg" alt="Sample Image"&gt;
+&lt;a href="https://example.com" target="_blank"&gt;Visit Example&lt;/a&gt;
+          </code></pre>
+        </p>
+        <a class="mobile-nav"  href="#Introduction">back top</a>
+      </section>
+
+
+<!-- LISTS -->
+      <section class="main-section" id="Lists">
+        <header><h2>Lists</h2></header>
+        <p>HTML supports two main types of lists: ordered (<span class="tag">&lt;ol&gt;</span>) and unordered (<span class="tag">&lt;ul&gt;</span>>). Ordered lists are numbered, while unordered lists use bullet points.</p>
+        <p>Each list item is defined using the <span class="tag">&lt;li&gt;</span> tag, and lists can be nested to create hierarchical structures.</p>
+        <p>Example of an unordered list:
+          <pre><code>
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+          </code></pre>
+        </p>
+
+        <p>Example of an ordered list:
+          <pre><code>
+&lt;ol&gt;
+  &lt;li&gt;Start with HTML&lt;/li&gt;
+  &lt;li&gt;Add CSS&lt;/li&gt;
+  &lt;li&gt;Learn Javascript&lt;/li&gt;
+&lt;/ol&gt;
+          </code></pre>
+        </p>
+        <a class="mobile-nav"  href="#Introduction">back top</a>
+      </section>
+
+<!-- FORMS -->
+      <section class="main-section" id="Forms">
+        <header><h2>Forms</h2></header>
+        <p>Forms are essential for user input. They collect data from users and send it to a server for processing.</p>
+        <p>The <span class="tag">&lt;form&gt;</span> element acts as a container, and input fields, buttons, and labels are nested within it.</p>
+        <p>Forms support various input types, including text, email, password, and file uploads, making them versatile for diverse use cases.</p>
+        <p>Example of a simple form:
+          <pre><code>
+  &lt;form action="/submit" method="post"&gt;
+    &lt;label for="name">Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+    &lt;button type="submit">Submit&lt;/button&gt;
+  &lt;/form&gt;
+          </code></pre>
+        </p>
+        <a class="mobile-nav"  href="#Introduction">back top</a>
+      </section>
+    </main>
+
+  </body>
+</html>
